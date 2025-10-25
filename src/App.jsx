@@ -34,16 +34,17 @@ const App = () => {
    },[])
   return(
     <>
-      <div className="h-250 border-2 bg-[#050708]">
+      <div className="h-350 border-0 bg-[#050708] border-white">
        
-          <div className="border-white border-0 h-30 m-2 flex justify-center items-center">
+          <div className="border-white border-0 h-30 flex justify-center items-center">
               <input type="search" 
                className="border-0 border-white outline-white outline-1 p-3 text-white shadow-2xl rounded-md w-60"
                placeholder="Search Movies"
                onChange={(e) => setinput(e.target.value)}
                value={input}
+               autoCorrect="ON"
               />
-              <button className="border-0 border-white m-2 p-3 rounded-md text-white bg-green-400 cursor-pointer hover:border-2 " onClick={() =>
+              <button className="border-0 border-white m-2 p-3 rounded-md text-white bg-green-400 cursor-pointer hover:border-2 active:bg-green-300" onClick={() =>
                 mydatas()
               }>Search <i className="fa-solid fa-magnifying-glass"></i></button>
           </div> 
